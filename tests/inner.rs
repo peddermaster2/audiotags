@@ -24,7 +24,7 @@ fn test_inner() {
     let mut id3tag = tag.to_dyn_tag(TagType::Id3v2);
 
     id3tag
-        .write_to_path(tmp_path.to_str().unwrap())
+        .write_to_path(tmp_path)
         .expect("Fail to write!");
 
     let id3tag_reload = Tag::default()

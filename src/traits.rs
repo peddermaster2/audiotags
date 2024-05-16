@@ -148,7 +148,7 @@ pub trait AudioTagEdit: AudioTagConfig {
 pub trait AudioTagWrite {
     fn write_to(&mut self, file: &mut File) -> crate::Result<()>;
     // cannot use impl AsRef<Path>
-    fn write_to_path(&mut self, path: &str) -> crate::Result<()>;
+    fn write_to_path(&mut self, path: &Path) -> crate::Result<()>;
 }
 
 pub trait AudioTagConfig {
